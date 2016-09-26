@@ -8,7 +8,7 @@ namespace Lab13_Counting_alligators
 {
     class CountUtil
     {
-        public static void count(Countable c, int maxCount)
+        public static void count(ICountable c, int maxCount)
         {
             for (int i = 0; i < maxCount; i++)
             {
@@ -19,7 +19,7 @@ namespace Lab13_Counting_alligators
         }
 
 
-        public static void count(Cloneable c,int maxCount)
+        public static void count(ICloneable c,int maxCount)
         {
             for (int i = 0; i < maxCount; i++)
             {

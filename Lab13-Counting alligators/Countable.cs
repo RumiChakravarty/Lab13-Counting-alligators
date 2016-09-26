@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Lab13_Counting_alligators
 {
-    interface Countable
+    interface ICountable
     {
         void incrementCount();
         void resetCount();

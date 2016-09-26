@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Lab13_Counting_alligators
 {
-    interface Cloneable:Countable
+    interface ICloneable:ICountable
     {
         string getName();
-        Cloneable cloneAnimal(Cloneable animal);
+        ICloneable cloneAnimal(ICloneable animal);
         void setCloneName(string name);
 
     }

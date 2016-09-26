@@ -6,30 +6,30 @@ using System.Threading.Tasks;
 
 namespace Lab13_Counting_alligators
 {
-    class Alligator:Countable
+    class Alligator:ICountable
     {
         int count;
 
         
 
-         void Countable.incrementCount()
+         void ICountable.incrementCount()
         {
             count++;
         }
 
-         void Countable.resetCount()
+         void ICountable.resetCount()
         {
             count = 0;
         }
 
-        int Countable.getCount()
+        int ICountable.getCount()
         {
             return count;
         }
 
         
 
-        string Countable.getCountString()
+        string ICountable.getCountString()
         {
             return count.ToString();
         }

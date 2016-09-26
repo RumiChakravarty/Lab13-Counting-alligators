@@ -6,54 +6,49 @@ using System.Threading.Tasks;
 
 namespace Lab13_Counting_alligators
 {
-    class Sheep : Countable, Cloneable
+    class Sheep : ICountable, ICloneable
     {
         private int count;
       string name = "Blackie";
 
-         int Countable.getCount()
+         int ICountable.getCount()
         {
             return count;
         }
 
-        string Countable.getCountString()
+        string ICountable.getCountString()
         {
             return count.ToString();
         }
 
-         void Countable.incrementCount()
+         void ICountable.incrementCount()
         {
             count++;
         }
 
         
-        void Countable.resetCount()
+        void ICountable.resetCount()
         {
             count = 0;
         }
 
 
 
-        //public string toUpdateName(string Name)
-        //{
-        //    name = Name;
-            
-        //    return name;
-        //}
+      
 
-        string Cloneable.getName()
+        string ICloneable.getName()
         {
             return name;
         }
 
-        Cloneable Cloneable.cloneAnimal(Cloneable animal)
+        ICloneable ICloneable.cloneAnimal(ICloneable animal)
         {
             animal = new Sheep();
             animal.setCloneName("Dolly");
             return animal;
         }
 
-        void Cloneable.setCloneName(string name)
+        void ICloneable.setCloneName(string name)
         {
             this.name = name;
         }
